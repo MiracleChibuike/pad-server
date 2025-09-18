@@ -1,0 +1,39 @@
+{
+  "todos": [
+    {
+      "Task_Title": "Complete my Portfolio Project and add the needed",
+      "Task_Note": "Start as soon as possible doing this",
+      "Date": "2025-09-09T11:44",
+      "priority": "High",
+      "Status": "Completed",
+      "id": "bc4f"
+    },
+    {
+      "Task_Title": "Start Learning React and add the necessary items ",
+      "Task_Note": "Endeavor to get started learning react.js using their official website...",
+      "Date": "2025-09-20T11:38",
+      "priority": "Low",
+      "Status": "Active",
+      "id": "0f94"
+    }
+  ],
+  "Expenses": [
+    {
+      "id": "a250"
+    }
+  ],
+  "users": [
+    {
+      "User_Name": "Miracle Coder",
+      "User_Email": "miracledev@gmail.com",
+      "User_Password": "89tvio7834tufburfbk",
+      "id": "2309"
+    },
+    {
+      "User_Name": "James Coder",
+      "User_Email": "jamesdev@gmail.com",
+      "User_Password": "89tvio7834tufburfbk",
+      "id": "c3cd"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Pad</title>
+    <link rel="shortcut icon" href="/week3/images/paypal_fav.jpeg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <!-- Default CSS -->
+         <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="to-do-container">
+            <h2>Welcome to To-Do LIst App</h2>
+            <p>Create your tasks and manage them with ease</p>
+            <div class="task-ContainerMain">
+                <div class="taskContainer">
+                    <h2 class="taskHeader">Create task</h2>
+                    <form id="todoForm">
+                        <div class="taskName">
+                            <label for="name-task">Title</label>
+                            <input type="text" name="Task_Title" placeholder="Enter Title" required>
+                        </div>
+                        <div class="taskText">
+                            <label for="task-text">Task</label>
+                           <textarea name="Task_Note" id="" placeholder="Enter task to do" draggable="false"></textarea>
+                        </div>
+                        <div class="taskDate">
+                            <label for="task-date">Date</label>
+                            <input type="datetime-local" name="Date">
+                        </div>
+                        <div class="priority">
+                            <label for="priority">Priority</label>
+                            <select name="priority" id="">
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+                        <div class="active-status">
+                            <label for="active-stat">Status</label>
+                            <select name="Status" id="">
+                                <option value="Active" class="">Active</option>
+                                <option value="Pending" class="">Pending</option>
+                                <option value="Completed" class=" ">Completed</option>
+                            </select>
+                        </div>
+                        <div class="save">
+                            <button type="submit" class="btn btn-primary" id="AddTask">Save</button>
+                            <button type="button" id="cancelTask" class="btn btn-secondary">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <button title="This is used for explanation">Explain</button>
+        <!-- View task -->
+        <div class="task-ContainerMain viewTask">
+            <div class="taskContainer viewTaskContainer">
+                <h2 class="taskHeader">View task</h2>
+                <form id="todoForm">
+                    <div class="viewID">
+                        <label for="task_ID">ID</label>
+                        <input type="text" id="task_ID" disabled readonly>
+                    </div>
+                    <div class="taskName">
+                        <label for="name-task">Title</label>
+                        <input type="text" name="Task_Title" id="taskTitle" readonly>
+                    </div>
+                    <div class="taskText">
+                        <label for="task-text">Task</label>
+                        <textarea name="Task_Note" id="task" draggable="false" disabled readonly></textarea>
+                    </div>
+                    <div class="taskDate">
+                        <label for="task-date">Date</label>
+                        <input type="datetime-local" name="Date" id="date_task" disabled readonly>
+                    </div>
+                    <div class="priority">
+                        <label for="priority">Priority</label>
+                        <select name="priority" id="priority" disabled readonly>
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+                    <div class="active-status">
+                        <label for="active-stat">Status</label>
+                        <select name="Status" id="Status" disabled readonly>
+                            <option value="Active" class="">Active</option>
+                            <option value="Pending" class="">Pending</option>
+                            <option value="Completed" class=" ">Completed</option>
+                        </select>
+                    </div>
+                    <div class="save">
+                        <!-- <button type="submit" class="btn btn-primary" id="AddTask">Save</button> -->
+                        <button type="button" id="cancelTask" onclick="closeTask()" class="btn btn-secondary">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Update Task -->
+        <div class="task-ContainerMain updateTask">
+            <div class="taskContainer updateTaskContainer">
+                <h2 class="taskHeader">Update task</h2>
+                <form id="todoForm">
+                    <div class="viewID">
+                        <label for="task_ID">ID</label>
+                        <input type="text" id="task_ID_Update" readonly disabled>
+                    </div>
+                    <div class="taskName">
+                        <label for="name-task">Title</label>
+                        <input type="text" name="Task_Title" id="taskTitle_Update">
+                    </div>
+                    <div class="taskText">
+                        <label for="task-text">Task</label>
+                        <textarea name="Task_Note" id="task_Update" draggable="false"></textarea>
+                    </div>
+                    <div class="taskDate">
+                        <label for="task-date">Date</label>
+                        <input type="datetime-local" name="Date" id="date_task_update">
+                    </div>
+                    <div class="priority">
+                        <label for="priority">Priority</label>
+                        <select name="priority" id="priority_update">
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+                    <div class="active-status">
+                        <label for="active-stat">Status</label>
+                        <select name="Status" id="Status_update">
+                            <option value="Active" class="">Active</option>
+                            <option value="Pending" class="">Pending</option>
+                            <option value="Completed" class=" ">Completed</option>
+                        </select>
+                    </div>
+                    <div class="save">
+                        <button type="submit" class="btn btn-primary" id="updateTask">Save</button>
+                        <button type="button" id="cancelTask" onclick="closeTask()" class="btn btn-secondary">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Table to show Tasks -->
+        <div class="table-responsive table-sm mt-5">
+                    <table style="width: 100%;" class="table table-hover shadow-lg rounded-5 ">
+                        <thead class="bg-primary">
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Task</th>
+                                <th>Date</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_Body">
+                            
+                        
+                        </tbody>
+                    </table>
+        </div>
+
+
+        <!-- Button to add a To-Do -->
+        <div class="addButton">
+            <button id="displayTodo">
+                + 
+            </button>
+        </div>
+    </div>
+</body>
+
+<script src="js/index.js"></script>
+
+</html>

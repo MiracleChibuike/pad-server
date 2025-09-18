@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Comfortaa:wght@300..700&family=Dancing+Script&family=Epilogue:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost&family=Kalam&family=Kanit&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+Display:wght@600&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Odibee+Sans&family=PT+Sans+Narrow&family=Playwrite+ZA+Guides&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&family=Signika+Negative:wght@300..700&family=Slabo+27px&family=Syne:wght@400..800&family=Ubuntu:wght@500&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Yesteryear&display=swap");
+
+* {
+  font-family: "Jost", "serif";
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-gold: #ffa500;
+  --bg-white: #fff;
+  --bg-gray-white: #ccc;
+  --bg-dark: #020202;
+  --bg: #153870;
+}
+body {
+  margin: 20px 0;
+}
+h2, p{
+    color: var(--bg);
+}
+h2{
+    font-weight: 900;
+    font-size: 2rem;
+}
+/* .container{
+    background: var(--bg);
+    color: var(--bg-white);
+} */
+.task-ContainerMain, .viewTask, .updateTask {
+  position: absolute;
+  background: rgba(78, 77, 77, 0.5);
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 9999;
+  visibility: hidden;
+}
+.taskContainer, .viewTaskContainer, .updateTaskContainer {
+  background: var(--bg-white);
+  box-shadow: 0 0 20px var(--bg-dark);
+  padding: 10px 20px;
+  max-width: 800px;
+  position: relative;
+  top: 20px;
+  border-radius: 10px;
+  display: grid;
+  margin: 0 10px;
+}
+small {
+  color: #f19898;
+  font-size: 1.2rem;
+  position: relative;
+  left: -4px;
+}
+.taskContainer form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 14px 0;
+}
+.taskContainer form > div input,
+select, textarea {
+  padding: 12px 8px;
+  border-radius: 5px;
+  border: 1px solid var(--bg-gray-white);
+  outline: none;
+  margin: 5px 0;
+  transition: border 0.8s ease-in;
+}
+select,
+input[type="datetime-local"] {
+  background: var(--bg-white);
+  width: 100%;
+}
+.taskContainer form > div input:focus,
+select:focus, textarea:focus {
+  border-color: var(--bg);
+}
+#AddTask {
+  border: none;
+  margin: 10px 0;
+}
+.addButton {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+.addButton button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.5rem;
+  background-color: var(--bg-white);
+  color: var(--bg-gold);
+  box-shadow: 0 3.5px 4px var(--bg-gray-white);
+}
+.pending{
+  background: var(--bg);
+  color: var(--bg-white);
+}
+table tbody button {
+  background: transparent;
+  border: 2px solid rgba(63, 60, 60, 0.1);
+  border-radius: 6px;
+  padding: 6px 8px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #cbd5e1;
+  transition: 0.2s;
+}
+.table-sm td, 
+.table-sm th {
+  padding: 0.25rem 0.4rem !important;
+  font-size: 1rem;
+  white-space: nowrap;
+}
